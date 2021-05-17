@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	//1.es5获取实参
+	function actors() {
+    console.log(arguments);
+  }
+  actors('张三','李四','王二')
+
+  console.log('----------------');
+
+	//2.es6获取实参
+	function city(...rest) {
+    console.log(rest);
+  }
+  city('北京','上海','深圳')
+
+  console.log('-----------');
+
+	function num(a,b,...args) { //rest 参数必须要放在最后
+    console.log(a);
+    console.log(b);
+    console.log(args);
+  }
+
+  num(1,2,3,4,5,6,7)
+</script>
+
+</body>
+</html>

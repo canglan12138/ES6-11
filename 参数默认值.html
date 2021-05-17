@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	//1.形参设置初始值，一般位置要靠后
+	function add(a,b,c = 3) {
+		let result  = a + b + c
+    console.log(result);
+  }
+  add(1,2)
+
+  console.log('--------------');
+
+	//2.与解构使用
+	function connect({host = '127.0.0.1',port,username,password}) {
+    console.log(host);
+    console.log(port);
+    console.log(username);
+    console.log(password);
+  }
+
+  connect({
+		// host : 'localhost',
+		port : 3306,
+		username : 'admain',
+		password : 'admain'
+	})
+</script>
+
+</body>
+</html>

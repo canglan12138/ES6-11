@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	window.name = 'coderLG'
+	const obj = {
+	  name : 'coder'
+	}
+
+	function getname1() {
+    console.log(this.name);
+  }
+
+  let getname2 = () => {
+    console.log(this.name);  //是静态的，在箭头函数下使用 this，this 始终指向的是函数声明时所在作用域 this 的值
+  }
+
+	/*直接调用*/
+  getname1() //coderLG
+	getname2() //coderLG
+
+  console.log('---------------');
+
+  /*call 方法调用*/
+	getname1.call(obj) //coderLG
+	getname2.call(obj) //coder
+
+  console.log('---------------');
+
+	/*不能作为构造实例化对象*/
+	//错误
+	// let obj2 = (name,age) => {
+	//   this.name = name
+	// 	this.age = age
+	// }
+	//
+	// let people = new obj2('jack',20)
+  // console.log(people.name);
+  // console.log(people.age);
+
+  //正确
+  let obj3 = function (name,age) {
+    this.name = name
+    this.age = age
+  }
+
+  let people2 = new obj3('jack',20)
+  console.log(people2.name);
+  console.log(people2.age);
+
+  console.log('---------------------');
+
+  /*不能使用 arguments 变量*/
+	//错误
+	// let fn = () => {
+  //   console.log(arguments);
+  // }
+  // fn(1,2,3)
+
+	//正确
+	let fn = function () {
+    console.log(arguments);
+  }
+  fn(1,2,3)
+
+  console.log('---------------');
+
+   /*箭头函数的简写*/
+  //1) 省略小括号, 当形参有且只有一个的时候
+  // let add = n => {
+  //     return n + n;
+  // }
+  // console.log(add(9));
+  //2) 省略花括号, 当代码体只有一条语句的时候, 此时 return 必须省略
+  // 而且语句的执行结果就是函数的返回值
+	let add = n => n * n
+  console.log(add(7));
+</script>
+
+</body>
+</html>

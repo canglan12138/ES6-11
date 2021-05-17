@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<div></div>
+<div></div>
+<div></div>
+
+<script>
+	//1.数组的合并
+	const kuaizi = ['王太利','肖央']
+	const fenghuang = ['曾毅','玲花']
+
+	// const zuixuanxiaopingguo = kuaizi.concat(fenghuang) //concat() 方法用于连接两个或多个数组
+	const zuixuanxiaopingguo = [...fenghuang,...kuaizi] //将数组转化位参数序列 ['王太利','肖央','曾毅','玲花']
+  console.log(zuixuanxiaopingguo);
+
+	//2.数组的克隆
+	const sanzhihua = ['e','g','m']
+	const sanyecao = [...sanzhihua]
+  console.log(sanyecao);
+
+	//3.将伪数组转换为真正的数组
+	let divs = document.querySelectorAll('div')
+	const attr = [...divs]
+  console.log(attr);
+
+  console.log('----------');
+
+  // function fn() {
+  //   let arr = [...arguments]
+  //   console.log(arr);
+  // }
+	// fn(1,2,3,4)
+
+  function fn(...args) {
+    console.log(args);
+  }
+  fn(1,2,3,4)
+
+
+</script>
+
+</body>
+</html>
