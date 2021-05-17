@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	let name = 'coderlg'
+	let say = function () {
+    console.log(name + '说你好');
+  }
+
+  const people = {
+	  name,
+		say,
+		run() {
+      console.log(name +' ' + 'run~~~~');
+    }
+	}
+
+  console.log(people);
+  console.log(people.name);
+  people.say()
+  people.run()
+</script>
+
+</body>
+</html>
