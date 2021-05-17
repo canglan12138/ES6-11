@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+
+	//1.数组解构
+	const F4 = ['小沈阳','刘能','赵四','宋小宝']
+
+	let [xiao,liu,zhaos,song] = F4
+  console.log(xiao);
+  console.log(liu);
+  console.log(zhaos);
+  console.log(song);
+  console.log('-------------');
+
+  //2.对象解构
+	const zhao = {
+	  name : '赵本山',
+		age : '不详',
+		run : function () {
+      console.log('run~~~');
+    }
+	}
+
+	let {name,age,run} = zhao
+  console.log(name);
+  console.log(age);
+  console.log(run);
+  run()
+
+</script>
+
+</body>
+</html>
