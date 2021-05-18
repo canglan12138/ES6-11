@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	//定义一个对象
+	const banji = {
+	  name : '终极一班',
+		stus : [
+		    'xiaoming',
+				'xiaohu',
+				'xiaotian',
+				'knight'
+		],
+		[Symbol.iterator]() {
+	    //下标索引
+	    let index = 0
+
+			let _this = this
+	    return {
+	      next : function () {
+					if (index < _this.stus.length) {
+					  const result = {value : _this.stus[index],done : false}
+					  index++ //索引自增
+						return result
+					}else {
+					  return {value : undefined,done : true}
+					}
+        }
+			}
+		}
+	}
+
+	//遍历这个对象
+	for (let item of banji) {
+    console.log(item);
+  }
+</script>
+
+</body>
+</html>

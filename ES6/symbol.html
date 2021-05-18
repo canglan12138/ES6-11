@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+  let s = Symbol()
+  console.log(s);
+
+  console.log('----------');
+
+  let str1 = Symbol('joke')
+  let str2 = Symbol('joke')
+  console.log(str1 === str2);
+
+  console.log('---------------');
+
+  let s2 = Symbol.for('joke')
+  console.log(s2);
+</script>
+
+</body>
+</html>

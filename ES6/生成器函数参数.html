@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	function * gen(a) {
+    console.log(a);
+    console.log('11111');
+
+    let one = yield '11111'
+    console.log(one);
+
+    let two = yield '222222'
+    console.log(two);
+
+    let three = yield '33333'
+    console.log(three);
+  }
+
+  let iterator = gen('aaaa')
+
+  console.log(iterator.next());
+  console.log('==========================');
+  console.log(iterator.next('222'));
+  console.log('==========================');
+  console.log(iterator.next('333'));
+  console.log('==========================');
+  console.log(iterator.next('444'));
+</script>
+
+</body>
+</html>
