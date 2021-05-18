@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	new Promise((resolve, reject) => {
+	  let data = '成功的数据'
+		resolve(data)
+	}).then(function (value) {
+    console.log(value);
+  },function (reason) {
+    console.log(reason);
+  })
+</script>
+
+</body>
+</html>
