@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	let s = new Set(['好事','大事','小事'])
+	//添加
+  s.add('没事')
+	//删除
+	s.delete('小事')
+	//检测
+  console.log(s.has('大事'));
+
+  console.log(s);
+  console.log(s.size);
+
+  for (let item of s) {
+    console.log(item);
+  }
+
+  console.log('---------------');
+  //清空
+  s.clear()
+  console.log(s);
+  console.log(s.size);
+
+  console.log('-----------');
+
+  let arr = [1,2,3,4]
+	let a = arr.splice(1,1)
+  console.log(a); //[2]
+  console.log(arr); //[1, 3, 4]
+</script>
+
+</body>
+</html>

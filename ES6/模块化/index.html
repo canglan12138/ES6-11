@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script type="module">
+	/*1.通用的引入方式*/
+	//引入 分别暴露.js模块内容
+	// import * as m1 from './分别暴露.js'
+	//
+  // console.log(m1.teacher);
+  // console.log(m1.obj.name);
+  // m1.obj.run()
+  // console.log('----------------');
+	//
+  // //引入 统一暴露.js内容
+	// import * as m2 from './统一暴露.js'
+	//
+  // console.log(m2.school);
+  // m2.findJob()
+  // console.log('---------------');
+	//
+  // //引入 默认暴露.js
+	// import * as m3 from './默认暴露.js'
+	//
+  // console.log(m3);
+  // console.log(m3.default.school);
+	// m3.default.change()
+	//
+  // console.log('========================================');
+
+	/*2.解构赋值的形式*/
+	// import {teacher,obj} from "./分别暴露.js";
+	//
+  // console.log(teacher);
+  // console.log(obj.name);
+  // obj.run()
+	//
+  // console.log('======================');
+	//
+  // import {school as sc,findJob} from "./统一暴露.js";
+	//
+  // console.log(sc);
+  // findJob()
+	//
+  // console.log('==================');
+	//
+  // import {default as m3} from './默认暴露.js'
+	//
+  // console.log(m3.school);
+  // m3.change()
+
+	/*3.简便形式 针对默认暴露*/
+	// import m3 from './默认暴露.js'
+	//
+  // console.log(m3.school);
+	// m3.change()
+</script>
+
+<script src="入口文件.js" type="module"></script>
+
+</body>
+</html>
