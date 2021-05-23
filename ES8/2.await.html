@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>$Title$</title>
+	<title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+	const p = new Promise((resolve, reject) => {
+	  // resolve('处理成功')
+		reject('处理失败')
+	})
+
+	async function main() {
+		try {
+      const result = await p
+      console.log(result);
+		}catch (e) {
+      console.log(e);
+    }
+  }
+
+  main()
+</script>
+
 </body>
 </html>

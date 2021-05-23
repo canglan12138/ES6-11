@@ -9,19 +9,21 @@
 <script>
 	async function fun() {
 		//return '字符串'
+		throw new Error('错误')
 
-		return new Promise((resolve, reject) => {
-		  resolve('Promise')
-		})
+		// return new Promise((resolve, reject) => {
+		//   resolve('Promise')
+		// })
   }
 
   const result = fun()
   console.log(result);
-  result.then(result => {
-    console.log(result);
-  },error => {
-    console.log(error);
-  })
+
+  // result.then(result => {
+  //   console.log(result);
+  // },error => {
+  //   console.log(error);
+  // })
 </script>
 
 </body>
